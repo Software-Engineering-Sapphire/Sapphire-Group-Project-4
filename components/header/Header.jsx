@@ -18,7 +18,7 @@ export default function DynamicView() {
         <div>
             <div>
                 <header>
-                    <h1 class={nice}>Header</h1>
+                    <h1>Header</h1>
 
                 </header>
             </div>
