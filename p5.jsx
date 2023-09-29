@@ -21,7 +21,7 @@ export default function DynamicView() {
     return (
         <div>
 
-
+        <Header/>
             <HashRouter>
 
                 <Link to="/states" className="button-link">States </Link>

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Header from './components/header/HeaderReact'
 import States from './components/states/States';
 import Example from './components/example/Example';
+import './p5styles.css';
 
 ReactDOM.render(
     <DynamicView />,
@@ -18,6 +19,7 @@ export default function DynamicView() {
 
     return (
         <div>
+            <Header/>
             <button onClick={() => {toggleModel()}}>
                 {!showStates && 'Show States'}
                 {showStates && 'Show Example'}
