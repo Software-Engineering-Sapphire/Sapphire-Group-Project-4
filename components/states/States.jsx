@@ -21,11 +21,11 @@ class States extends React.Component {
   }
   render() {
     let listItem = window.models.states().filter((elem)=> elem.toLowerCase().includes(this.state.searchValue.toLowerCase()));
-    let FilteredListItem = listItem.map((elem)=><li key={elem}>{elem}</li>);
+    let FilteredListItem = listItem.map((elem)=><li key={elem}  class="list-items">{elem}</li>);
 
     return (
       <div>
-        <input type ="text" value = {this.state.searchValue} onChange={this.handleChangeSearch}/>
+        <input class = "search_bar" type ="text" value = {this.state.searchValue} onChange={this.handleChangeSearch}/>
 
         <ul>
           {FilteredListItem}

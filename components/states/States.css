@@ -4,3 +4,13 @@ CSS for the Project 4, Problem 2 States component
 Since CSS uses a global name space for classes we should use names starting with
 states- here.
 */
+.search_bar{
+    font-size: larger;
+    color: white;
+    background-color: #002868;
+}
+
+.list-items:nth-child(2N) {
+    background-color: #bf0a30;
+    color: white;
+}
