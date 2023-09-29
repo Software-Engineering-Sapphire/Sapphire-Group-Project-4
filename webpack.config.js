@@ -4,7 +4,7 @@ module.exports = {
     p2: "./p2.jsx",
     p4: "./p4.jsx",
     p5: "./p5.jsx",
-    HeaderReact: ".components/header/Header.jsx"
+    HeaderReact: "./components/header/Header.jsx"
   },
   module: {
     rules: [
