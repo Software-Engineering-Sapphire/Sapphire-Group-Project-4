@@ -1,6 +1,8 @@
 import React from 'react';
 import './Example.css';
 
+import Header from '../header/Header';
+
 /*
   Since this component shows code we include the https://prismjs.com/
   formatter. We invoke it by labelling code blocks with class="language-jsx"
@@ -108,12 +110,14 @@ class Example extends React.Component {
   render() {
     return (
       <div className="container Example">
+        <Header />
         <h1>Project 4 React.js Example</h1>
 
         <div className="motto-update">
-            <h3>{this.state.motto}</h3>
+            <h2 class='name'>{this.state.name}</h2>
+            <h3 class='motto'>{this.state.motto}</h3>
             <label for="motto-input">Motto: </label>
-            <input id="motto-input" type="text" value={this.state.motto} onChange={this.handleMottoChangeBound}/>
+            <input id="motto-input" type="text" value={this.state.motto} onChange={this.handleMottoChangeBound} maxLength={20}/>
         </div>
 
         <p>
