@@ -19,7 +19,7 @@ export default function DynamicView() {
             <div>
                 <header>
                     <h2>Header</h2>
-                    <img src='./happyguy.jpeg' alt="happy2guy"></img>
+                    <img src="/components/header/happyguy.jpeg" alt="happy3guy"></img>
                 </header>
             </div>
         </div>
