@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import States from './components/states/States';
 import Example from './components/example/Example';
+import Header from './components/header/HeaderReact';
 import { HashRouter, Route, Link } from "react-router-dom";
 import './p5styles.css';
 
