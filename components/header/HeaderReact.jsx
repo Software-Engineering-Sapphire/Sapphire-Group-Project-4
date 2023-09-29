@@ -1,13 +1,10 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 
-import States from './components/states/States';
-import Example from './components/example/Example';
+import States from '../states/States';
+import Example from '../example/Example';
 
-ReactDOM.render(
-    <DynamicView />,
-    document.getElementById('dynamic-react'),
-);
+
 
 export default function DynamicView() {
     const [showStates, setShowStates] = useState(false);
