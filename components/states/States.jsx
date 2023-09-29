@@ -10,12 +10,26 @@ class States extends React.Component {
   constructor(props) {
     super(props);
     console.log('window.models.states', window.models.states);
+    this.state = {
+      searchValue: ""
+    };
+    this.handleChangeSearch = event => this.handleChange(event);
   }
 
+  handleChange(event) {
+    this.setState({searchValue: event.target.value});
+  }
   render() {
+    let listItem = window.models.states().filter((elem)=> elem.toLowerCase().includes(this.state.searchValue.toLowerCase()));
+    let FilteredListItem = listItem.map((elem)=><li key={elem}>{elem}</li>);
+
     return (
       <div>
-        Replace this with the code for Project 4, Problem 2
+        <input type ="text" value = {this.state.searchValue} onChange={this.handleChangeSearch}/>
+
+        <ul>
+          {FilteredListItem}
+        </ul>
       </div>
     );
   }
