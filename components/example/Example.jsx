@@ -24,9 +24,11 @@ class Example extends React.Component {
     this.state = {
       name: window.models.exampleModel().name,
       counter: 0,
+        motto:"Better out than in",
       inputValue: '',
       buttonWasClicked: '',
     };
+
 
     // React events are called directly from DOM event handlers
     // so we cannot directly call the methods of this class. We
@@ -44,6 +46,12 @@ class Example extends React.Component {
 
   // componentDidMount - Called when Component is activiated
   componentDidMount() {
+      if (models.exampleModel) {
+          const modelData = models.exampleModel();
+          if (modelData.motto && modelData.motto.length <= 20) {
+              this.setState({ motto: modelData.motto });
+          }
+      }
     // To demonstate state updating we define a function
     // that increments the counter state and instruct the
     // DOM to call it every 2 seconds.
@@ -103,7 +111,10 @@ class Example extends React.Component {
         <h1>Project 4 React.js Example</h1>
 
         <div className="motto-update">
-          {/* Your problem #1 motto displaying and updating widget goes here */}
+            {/* Display the user's name */}
+            <p>{this.state.name}</p>
+            {/* Display the motto */}
+            <p>{this.state.motto}</p>
         </div>
 
         <p>
