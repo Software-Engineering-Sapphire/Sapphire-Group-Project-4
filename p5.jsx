@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 
 import States from './components/states/States';
 import Example from './components/example/Example';
+import { HashRouter, Route, Link } from "react-router-dom";
+import './p5styles.css';
 
 ReactDOM.render(
     <DynamicView />,
@@ -18,12 +20,16 @@ export default function DynamicView() {
 
     return (
         <div>
-            <button onClick={() => {toggleModel()}}>
-                {!showStates && 'Show States'}
-                {showStates && 'Show Example'}
-            </button>
-            {!showStates && <Example />}
-            {showStates && <States />}
+
+
+            <HashRouter>
+
+                <Link to="/states" className="button-link">States </Link>
+                <Link to="/example" className="button-link">Example</Link>
+                <Route path="/states" component={States} />
+                <Route path="/example" component={Example} />
+            </HashRouter>
         </div>
+
     )
 }
