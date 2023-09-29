@@ -18,14 +18,8 @@ export default function DynamicView() {
         <div>
             <div>
                 <header>
-                    <h1>Your Website Name</h1>
-                    <HashRouter>
-
-                        <Link to="/states" className="button-link">States </Link>
-                        <Link to="/example" className="button-link">Example</Link>
-                        <Route path="/states" component={States} />
-                        <Route path="/example" component={Example} />
-                    </HashRouter>
+                    <h1>Header</h1>
+                    
                 </header>
             </div>
         </div>
