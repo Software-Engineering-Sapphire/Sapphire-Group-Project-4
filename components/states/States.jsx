@@ -7,32 +7,33 @@ import './States.css';
  * window.models.states.
  */
 class States extends React.Component {
-  constructor(props) {
-    super(props);
-    console.log('window.models.states', window.models.states);
-    this.state = {
-      searchValue: ""
-    };
-    this.handleChangeSearch = event => this.handleChange(event);
-  }
+    constructor(props) {
+        super(props);
+        console.log('window.models.states', window.models.states);
+        this.state = {
+            searchValue: ""
+        };
+        this.handleChangeSearch = event => this.handleChange(event);
+    }
 
-  handleChange(event) {
-    this.setState({searchValue: event.target.value});
-  }
-  render() {
-    let listItem = window.models.states().filter((elem)=> elem.toLowerCase().includes(this.state.searchValue.toLowerCase()));
-    let FilteredListItem = listItem.map((elem)=><li key={elem}  class="list-items">{elem}</li>);
+    handleChange(event) {
+        this.setState({searchValue: event.target.value});
+    }
 
-    return (
-      <div>
-        <input class = "search_bar" type ="text" value = {this.state.searchValue} onChange={this.handleChangeSearch}/>
+    render() {
+        let listItem = window.models.states().filter((elem) => elem.toLowerCase().includes(this.state.searchValue.toLowerCase()));
+        let FilteredListItem = listItem.map((elem) => <li key={elem} className="list-items">{elem}</li>);
 
-        <ul>
-          {FilteredListItem}
-        </ul>
-      </div>
-    );
-  }
+        return (
+            <div>
+                <input className="search_bar" type="text" value={this.state.searchValue}
+                       onChange={this.handleChangeSearch}/>
+                <ul>
+                    {FilteredListItem}
+                </ul>
+            </div>
+        );
+    }
 }
 
 export default States;

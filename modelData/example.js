@@ -11,12 +11,12 @@
 var models;
 
 if (models === undefined) {
-  models = {};
+    models = {};
 }
 
 models.exampleModel = function () {
-  return {
-    name: "Team Sapphire",
-    motto: "Semper Vigilans"
-  };
+    return {
+        name: "Team Sapphire",
+        motto: "Semper Vigilans"
+    };
 };

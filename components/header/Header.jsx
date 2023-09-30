@@ -6,7 +6,6 @@ import Example from '../example/Example';
 import {HashRouter, Link, Route} from "react-router-dom";
 
 
-
 export default function DynamicView() {
     const [showStates, setShowStates] = useState(false);
 
@@ -16,12 +15,10 @@ export default function DynamicView() {
 
     return (
         <div>
-            <div>
-                <header>
-                    <h2>Header</h2>
-                    <img src="/components/header/happyguy.jpeg" alt="happy3guy"></img>
-                </header>
-            </div>
+            <header>
+                <h2>Header</h2>
+                <img src="/components/header/happyguy.jpeg" alt="happy3guy"></img>
+            </header>
         </div>
     )
 }
