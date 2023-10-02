@@ -1,7 +1,7 @@
 import React from 'react';
 import './Example.css';
 
-
+/* eslint-disable indent */
 
 /*
   Since this component shows code we include the https://prismjs.com/
