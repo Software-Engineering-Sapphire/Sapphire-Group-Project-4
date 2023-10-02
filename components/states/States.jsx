@@ -27,7 +27,7 @@ class States extends React.Component {
         return (
             <div>
                 <input className="search_bar" type="text" value={this.state.searchValue}
-                       onChange={this.handleChangeSearch}/>
+                       onChange={this.handleChangeSearch}/> Current search: {this.state.searchValue}
                 <ul>
                     {FilteredListItem}
                 </ul>
