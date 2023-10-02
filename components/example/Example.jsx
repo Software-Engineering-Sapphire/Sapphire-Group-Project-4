@@ -1,7 +1,7 @@
 import React from 'react';
 import './Example.css';
 
-import Header from '../header/Header';
+
 
 /*
   Since this component shows code we include the https://prismjs.com/
@@ -112,9 +112,9 @@ class Example extends React.Component {
                 <h1>Project 4 React.js Example</h1>
 
                 <div className="motto-update">
-                    <h2 class='name'>{this.state.name}</h2>
-                    <h3 class='motto'>{this.state.motto}</h3>
-                    <label for="motto-input">Motto: </label>
+                    <h2 className='name'>{this.state.name}</h2>
+                    <h3 className='motto'>{this.state.motto}</h3>
+                    <label htmlFor="motto-input">Motto: </label>
                     <input id="motto-input" type="text" value={this.state.motto} onChange={this.handleMottoChangeBound}
                            maxLength={20}/>
                 </div>
