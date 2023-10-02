@@ -23,11 +23,16 @@ class States extends React.Component {
     render() {
         let listItem = window.models.states().filter((elem) => elem.toLowerCase().includes(this.state.searchValue.toLowerCase()));
         let FilteredListItem = listItem.map((elem) => <li key={elem} className="list-items">{elem}</li>);
+        let numResults = FilteredListItem.length;
+        if (FilteredListItem.length === 0) {
+            FilteredListItem.push(<li key="no-results" className="list-items">NO RESULTS</li>);
+        }
 
         return (
             <div>
                 <input className="search_bar" type="text" value={this.state.searchValue}
-                       onChange={this.handleChangeSearch}/> Current search: {this.state.searchValue}
+                       onChange={this.handleChangeSearch}/>
+                <p>Current search: {this.state.searchValue}<br/>Number of results: {numResults}</p>
                 <ul>
                     {FilteredListItem}
                 </ul>
