@@ -8,6 +8,11 @@ import {HashRouter, Route, Link} from "react-router-dom";
 import './p5styles.css';
 
 ReactDOM.render(
+    <Header />,
+    document.getElementById('reactheader'),
+);
+
+ReactDOM.render(
     <DynamicView/>,
     document.getElementById('dynamic-react'),
 );
@@ -21,7 +26,6 @@ export default function DynamicView() {
 
     return (
         <div>
-            <Header/>
             <HashRouter>
                 <Link to="/states" className="button-link">States </Link>
                 <Link to="/example" className="button-link">Example</Link>

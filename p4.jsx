@@ -6,6 +6,11 @@ import Example from './components/example/Example';
 import './p5styles.css';
 
 ReactDOM.render(
+    <Header />,
+    document.getElementById('reactheader'),
+);
+
+ReactDOM.render(
     <DynamicView/>,
     document.getElementById('dynamic-react'),
 );
@@ -19,7 +24,6 @@ export default function DynamicView() {
 
     return (
         <div>
-            <Header/>
             <button onClick={() => {
                 toggleModel()
             }}>
