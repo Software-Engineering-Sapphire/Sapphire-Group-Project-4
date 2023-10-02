@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 
+import {HashRouter, Route, Link} from "react-router-dom";
 import States from './components/states/States';
 import Example from './components/example/Example';
 import Header from './components/header/Header';
-import {HashRouter, Route, Link} from "react-router-dom";
 import './p5styles.css';
 
 ReactDOM.render(
@@ -18,12 +18,6 @@ ReactDOM.render(
 );
 
 export default function DynamicView() {
-    const [showStates, setShowStates] = useState(false);
-
-    const toggleModel = () => {
-        setShowStates((prevShowStates) => !prevShowStates);
-    }
-
     return (
         <div>
             <HashRouter>
@@ -33,6 +27,5 @@ export default function DynamicView() {
                 <Route path="/example" component={Example}/>
             </HashRouter>
         </div>
-
-    )
+    );
 }

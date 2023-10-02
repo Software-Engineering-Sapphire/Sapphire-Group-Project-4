@@ -20,12 +20,12 @@ export default function DynamicView() {
 
     const toggleModel = () => {
         setShowStates((prevShowStates) => !prevShowStates);
-    }
+    };
 
     return (
         <div>
             <button onClick={() => {
-                toggleModel()
+                toggleModel();
             }}>
                 {!showStates && 'Show States'}
                 {showStates && 'Show Example'}
@@ -33,5 +33,5 @@ export default function DynamicView() {
             {!showStates && <Example/>}
             {showStates && <States/>}
         </div>
-    )
+    );
 }
